@@ -1,0 +1,26 @@
+{
+  "name": "FilePreview.io",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Preview almost any kind of file in your browser.",
+  "homepage_url": "http://FilePreview.io",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "permissions": [
+    "contextMenus",
+    "https://*/*",
+    "http://*/*",
+    "webRequest"
+  ],
+  "sandbox": {
+    "pages": ["src/preview.html"]
+  }
+}
