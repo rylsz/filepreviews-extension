@@ -12,17 +12,24 @@ function srcHandler(info) {
   openPreviewTab(info.srcUrl);
 }
 
+function selectionHandler(info) {
+  openPreviewTab(info.selectionText);
+}
+
 function linkHandler(info) {
   openPreviewTab(info.linkUrl);
 }
 
 // Create one test item for each context type.
 var tagContexts = ['image', 'video', 'audio'];
-var textContexts = ['selection', 'link','editable'];
+var textContexts = ['selection', 'editable'];
+var linkContext = ['link'];
 
 chrome.contextMenus.create({title: 'Preview from source...',
                            contexts: tagContexts, onclick: srcHandler});
 
-chrome.contextMenus.create({title: 'Preview from link...',
-                            contexts: textContexts, onclick: linkHandler});
+chrome.contextMenus.create({title: 'Preview from selection...',
+                            contexts: textContexts, onclick: selectionHandler});
 
+chrome.contextMenus.create({title: 'Preview from link...',
+                            contexts: linkContext, onclick: linkHandler});
