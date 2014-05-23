@@ -1,7 +1,7 @@
 {
   "name": "FilePreviews.io",
   "short_name": "FilePreviews",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 2,
   "description": "Preview almost any kind of file in your browser. RAW images, Photoshop, Word, AutoCAD, Video, Audio and much more.",
   "homepage_url": "http://filepreviews.io",
