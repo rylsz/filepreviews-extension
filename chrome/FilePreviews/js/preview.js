@@ -1,7 +1,7 @@
 /* global FilePreviews */
 /* global url */
 'use strict';
-var previews = new FilePreviews({debug:true}),
+var previews = new FilePreviews({apiKey:'V5Z2n1DmeKChINJD2188lZZZY5SSOQ'}),
     $result = $('#result'),
     $img = $result.find('img');
 

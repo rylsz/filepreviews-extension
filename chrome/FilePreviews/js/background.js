@@ -4,7 +4,7 @@
 function openPreviewTab(url) {
   var encUrl = encodeURIComponent(url);
   chrome.tabs.create({
-    url: chrome.extension.getURL('src/preview.html?url=' + encUrl)
+    url: chrome.extension.getURL('preview.html?url=' + encUrl)
   });
 }
 

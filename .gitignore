@@ -28,3 +28,6 @@ Temporary Items
 *.crx
 
 bower_components/
+node_modules/
+build/
+dist/
