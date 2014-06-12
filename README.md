@@ -8,3 +8,21 @@ To use the extension just right click on an image or link and select FilePreview
 
 ### Try it
 [FilePreviews.io](https://chrome.google.com/webstore/detail/filepreviewsio/ehikoklcpeebdjcndeolpgoomjggmgoi) on the Google Web Store
+
+## Develoment
+
+#### Build
+
+```
+$ npm install
+$ cd chrome/FilePreviews/
+$ bower install
+$ cd ../../
+$ grunt build
+```
+
+#### Building for upload to Chrome Store
+
+```
+$ grunt build:dist
+```
