@@ -26,6 +26,12 @@ module.exports = function(grunt) {
           },
           {
             expand: true,
+            cwd: 'chrome/FilePreviews/_locales/',
+            src: ['**/*'],
+            dest: 'chrome/build/_locales/'
+          },
+          {
+            expand: true,
             src: ['chrome/FilePreviews/*.html', 'chrome/FilePreviews/manifest.json'],
             dest: 'chrome/build/',
             filter:'isFile',
