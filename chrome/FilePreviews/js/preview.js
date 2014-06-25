@@ -8,7 +8,6 @@ var previews = new FilePreviews({apiKey:'V5Z2n1DmeKChINJD2188lZZZY5SSOQ'}),
 var options = {};
 
 url.setUrl(window.location.href);
-var encUrl = encodeURIComponent(url.url);
 
 function insertThumbnail(thumb) {
   $img.clone().attr('src', thumb.url).appendTo('#result');
@@ -32,18 +31,19 @@ function handleDocument(doc) {
   });
 }
 
-previews.generate(encUrl, options, function(err, result) {
-  var resultTitle;
+previews.generate(url.url, options, function(err, result) {
+  var resultTitle,
+      metadataResults = result.metadata.results;
 
   if (err) {
     $result.html(':( Ups! An error ocurred.<br>' + err);
     resultTitle = 'Error';
 
   } else {
-    if (result.metadata.extra_data.psd){
-      handlePSD(result.metadata.extra_data.psd);
+    if (metadataResults.metadata.psd){
+      handlePSD(metadataResults.metadata.psd);
     } else {
-        handleDocument(result.metadata.thumbnails);
+      handleDocument(metadataResults.thumbnails);
     }
 
     resultTitle = 'Done - FilePreviews.io';
